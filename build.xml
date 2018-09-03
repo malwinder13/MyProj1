@@ -32,7 +32,7 @@
     </target>
 		
 	<target name="deploy">
-      <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="Deploy" rollbackOnError="true" logType="Debugonly" ignoreWarnings="true"/>
+      <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="src" rollbackOnError="true" logType="Debugonly" ignoreWarnings="true"/>
     </target>	
 	
     <!-- Shows removing code; only succeeds if done after deployCode -->
