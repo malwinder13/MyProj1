@@ -1,6 +1,6 @@
 @isTest
 public class AccountTest {
-	@testSetup
+    @testSetup
     public static void setup(){
         Account a1 = new Account(Name='Test Account');
         insert a1;
@@ -12,5 +12,8 @@ public class AccountTest {
     public static void test(){
         Account a1 = [Select Name, Type from Account Where Name='Test Account' limit 1];
         System.assertEquals(a1.Type,'Prospect');
+
+        Account a2 = [Select Name, Type from Account Where Name='My Account' limit 1];
+        System.assertNotEquals(a1.Type,'Prospect');
     }
 }
